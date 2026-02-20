@@ -5,6 +5,12 @@ A free, open-source Chrome extension that helps people with disabilities overcom
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green.svg)
 
+## 🎥 Video Demo
+
+https://github.com/user-attachments/assets/videoDemo.mp4
+
+> Watch the extension in action! See how the floating panel, voice commands, and accessibility features work on real websites.
+
 ## ✨ Features
 
 - **🔤 Text Size Control** - Adjust text size from 50% to 200%
