@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1>Accessibility Helper</h1>
+      <p class="subtitle">Making the web accessible for everyone</p>
+    </header>
+    
+    <main>
+      <section class="status-section">
+        <div class="status-card">
+          <span class="status-icon" aria-hidden="true">✓</span>
+          <div class="status-info">
+            <h2>Extension Active</h2>
+            <p>Floating panel is visible on all pages</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="quick-actions">
+        <h2>Quick Actions</h2>
+        
+        <button class="action-card" id="toggle-panel">
+          <span class="action-icon" aria-hidden="true">👁️</span>
+          <div class="action-info">
+            <h3>Toggle Panel</h3>
+            <p>Show/hide the floating panel</p>
+            <span class="keyboard-hint">Alt+A</span>
+          </div>
+        </button>
+        
+        <button class="action-card" id="open-options">
+          <span class="action-icon" aria-hidden="true">⚙️</span>
+          <div class="action-info">
+            <h3>Settings</h3>
+            <p>Customize your experience</p>
+          </div>
+        </button>
+      </section>
+      
+      <section class="info-section">
+        <h2>About</h2>
+        <p>This extension helps people with disabilities overcome accessibility barriers on websites.</p>
+        <p class="version">Version 1.0.0</p>
+      </section>
+    </main>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

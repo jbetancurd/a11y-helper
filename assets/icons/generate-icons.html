@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Extension Icons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      color: #0056b3;
+      margin-bottom: 20px;
+    }
+    
+    .instructions {
+      background: #e7f3ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    
+    .instructions ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin: 8px 0;
+    }
+    
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .icon-card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+    
+    .icon-card h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    canvas {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+    }
+    
+    canvas:hover {
+      border-color: #0056b3;
+      box-shadow: 0 2px 8px rgba(0,86,179,0.3);
+    }
+    
+    .download-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .download-btn:hover {
+      background: #003d82;
+    }
+    
+    .info {
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 30px;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Extension Icon Generator</h1>
+    
+    <div class="instructions">
+      <h3>📋 How to Save Icons:</h3>
+      <ol>
+        <li><strong>Right-click</strong> on each icon below</li>
+        <li>Select <strong>"Save image as..."</strong></li>
+        <li>Save with the exact filename shown (e.g., <code>icon-16.png</code>)</li>
+        <li>Save all three icons to: <code>accessibility-chrome-extension/assets/icons/</code></li>
+        <li>Reload the extension in Chrome</li>
+      </ol>
+      <p><strong>Or use the download buttons below each icon!</strong></p>
+    </div>
+    
+    <div class="icon-grid">
+      <div class="icon-card">
+        <h3>16×16 pixels</h3>
+        <canvas id="icon-16" width="16" height="16"></canvas>
+        <br>
+        <button class="download-btn" onclick="downloadIcon('icon-16', 16)">
+          Download icon-16.png
+        </button>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+          Toolbar icon
+        </p>
+      </div>
+      
+      <div class="icon-card">
+        <h3>48×48 pixels</h3>
+        <canvas id="icon-48" width="48" height="48"></canvas>
+        <br>
+        <button class="download-btn" onclick="downloadIcon('icon-48', 48)">
+          Download icon-48.png
+        </button>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+          Extension management
+        </p>
+      </div>
+      
+      <div class="icon-card">
+        <h3>128×128 pixels</h3>
+        <canvas id="icon-128" width="128" height="128"></canvas>
+        <br>
+        <button class="download-btn" onclick="downloadIcon('icon-128', 128)">
+          Download icon-128.png
+        </button>
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+          Chrome Web Store
+        </p>
+      </div>
+    </div>
+    
+    <div class="info">
+      <strong>💡 Tip:</strong> After downloading all three icons, reload your extension in 
+      <code>chrome://extensions/</code> to see the new icons!
+    </div>
+  </div>
+
+  <script>
+    // Material Design Accessibility Icon
+    // Universal accessibility symbol (person with arms outstretched)
+    
+    function drawAccessibilityIcon(canvas, size) {
+      const ctx = canvas.getContext('2d');
+      const scale = size / 24; // Material icons are 24x24 base
+      
+      // Clear canvas
+      ctx.clearRect(0, 0, size, size);
+      
+      // Set colors
+      const primaryColor = '#0056b3'; // Blue
+      const backgroundColor = 'white';
+      
+      // Draw background
+      ctx.fillStyle = backgroundColor;
+      ctx.fillRect(0, 0, size, size);
+      
+      // Scale and center
+      ctx.save();
+      ctx.translate(size / 2, size / 2);
+      ctx.scale(scale, scale);
+      
+      // Draw accessibility icon
+      ctx.fillStyle = primaryColor;
+      ctx.strokeStyle = primaryColor;
+      ctx.lineWidth = 1.5;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      
+      // Head (circle)
+      ctx.beginPath();
+      ctx.arc(0, -6, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Body (vertical line)
+      ctx.beginPath();
+      ctx.moveTo(0, -3);
+      ctx.lineTo(0, 5);
+      ctx.stroke();
+      
+      // Left arm (diagonal line)
+      ctx.beginPath();
+      ctx.moveTo(0, -1);
+      ctx.lineTo(-5, -4);
+      ctx.stroke();
+      
+      // Right arm (diagonal line)
+      ctx.beginPath();
+      ctx.moveTo(0, -1);
+      ctx.lineTo(5, -4);
+      ctx.stroke();
+      
+      // Left leg (diagonal line)
+      ctx.beginPath();
+      ctx.moveTo(0, 5);
+      ctx.lineTo(-4, 10);
+      ctx.stroke();
+      
+      // Right leg (diagonal line)
+      ctx.beginPath();
+      ctx.moveTo(0, 5);
+      ctx.lineTo(4, 10);
+      ctx.stroke();
+      
+      // Add circle around icon for better visibility
+      ctx.strokeStyle = primaryColor;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(0, 2, 11, 0, Math.PI * 2);
+      ctx.stroke();
+      
+      ctx.restore();
+    }
+    
+    // Draw all icons
+    drawAccessibilityIcon(document.getElementById('icon-16'), 16);
+    drawAccessibilityIcon(document.getElementById('icon-48'), 48);
+    drawAccessibilityIcon(document.getElementById('icon-128'), 128);
+    
+    // Download function
+    function downloadIcon(canvasId, size) {
+      const canvas = document.getElementById(canvasId);
+      const link = document.createElement('a');
+      link.download = `${canvasId}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+    
+    // Allow clicking canvas to download
+    document.querySelectorAll('canvas').forEach(canvas => {
+      canvas.addEventListener('click', function() {
+        const size = this.width;
+        downloadIcon(this.id, size);
+      });
+    });
+  </script>
+</body>
+</html>

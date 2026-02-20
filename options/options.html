@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Helper - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Accessibility Helper Settings</h1>
+      <p class="subtitle">Customize your accessibility experience</p>
+    </header>
+    
+    <main>
+      <section class="settings-section">
+        <h2>Panel Settings</h2>
+        
+        <div class="setting-group">
+          <label for="panel-position">Panel Position</label>
+          <select id="panel-position">
+            <option value="top-left">Top Left</option>
+            <option value="top-right">Top Right</option>
+            <option value="bottom-left">Bottom Left</option>
+            <option value="bottom-right">Bottom Right</option>
+          </select>
+          <p class="setting-description">Choose where the floating panel appears on the page</p>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="panel-visible">
+            Show panel on all pages
+          </label>
+          <p class="setting-description">Uncheck to hide the panel (use Alt+A to toggle)</p>
+        </div>
+      </section>
+      
+      <section class="settings-section">
+        <h2>Default Settings</h2>
+        
+        <div class="setting-group">
+          <label for="text-size">Default Text Size</label>
+          <div class="slider-container">
+            <input type="range" id="text-size" min="50" max="200" step="10" value="100">
+            <span id="text-size-value">100%</span>
+          </div>
+          <p class="setting-description">Set the default text size for all pages</p>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="high-contrast">
+            Enable high contrast by default
+          </label>
+          <p class="setting-description">Automatically apply high contrast mode to all pages</p>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="keyboard-nav">
+            Enable keyboard navigation by default
+          </label>
+          <p class="setting-description">Show focus indicators for keyboard navigation</p>
+        </div>
+      </section>
+      
+      <section class="settings-section">
+        <h2>Keyboard Shortcuts</h2>
+        <div class="shortcuts-list">
+          <div class="shortcut-item">
+            <span class="shortcut-key">Alt + A</span>
+            <span class="shortcut-desc">Toggle panel visibility</span>
+          </div>
+          <div class="shortcut-item">
+            <span class="shortcut-key">Escape</span>
+            <span class="shortcut-desc">Close expanded panel</span>
+          </div>
+          <div class="shortcut-item">
+            <span class="shortcut-key">Tab</span>
+            <span class="shortcut-desc">Navigate through controls</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="settings-section">
+        <h2>About</h2>
+        <p>Accessibility Helper helps people with disabilities overcome accessibility barriers on websites that don't follow proper accessibility standards.</p>
+        <p><strong>Version:</strong> 1.0.0</p>
+        <p><strong>Privacy:</strong> All processing happens locally. No data is collected or sent to external servers.</p>
+      </section>
+      
+      <div class="button-group">
+        <button id="save-settings" class="btn-primary">Save Settings</button>
+        <button id="reset-settings" class="btn-secondary">Reset to Defaults</button>
+      </div>
+      
+      <div id="save-message" class="save-message" hidden>
+        Settings saved successfully!
+      </div>
+    </main>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- Background circle -->
+  <circle cx="12" cy="12" r="11" fill="#0056b3"/>
+  
+  <!-- Accessibility icon in white -->
+  <g fill="white" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="12" cy="7" r="1.8"/>
+    
+    <!-- Body -->
+    <line x1="12" y1="9" x2="12" y2="15" stroke-width="1.2"/>
+    
+    <!-- Left arm -->
+    <line x1="12" y1="10" x2="8" y2="7.5" stroke-width="1.2"/>
+    
+    <!-- Right arm -->
+    <line x1="12" y1="10" x2="16" y2="7.5" stroke-width="1.2"/>
+    
+    <!-- Left leg -->
+    <line x1="12" y1="15" x2="9" y2="19" stroke-width="1.2"/>
+    
+    <!-- Right leg -->
+    <line x1="12" y1="15" x2="15" y2="19" stroke-width="1.2"/>
+  </g>
+</svg>

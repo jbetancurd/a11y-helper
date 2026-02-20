@@ -1,6 +1,12 @@
 MIT License
 
-Copyright (c) 2026 jbetancurd
+Copyright (c) 2025 [Your Name or Organization]
+
+INSTRUCTIONS: Replace "[Your Name or Organization]" above with your actual name.
+Examples:
+- Copyright (c) 2025 John Smith
+- Copyright (c) 2025 Accessibility Helper Project
+- Copyright (c) 2025 YourCompanyName
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +25,51 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY
+
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
+OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY
+WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR
+FITNESS FOR A PARTICULAR PURPOSE.
+
+THE AUTHORS AND COPYRIGHT HOLDERS SPECIFICALLY DISCLAIM:
+
+1. Any warranty that the software will meet your requirements or be error-free
+2. Any warranty regarding the accuracy, completeness, or reliability of results
+3. Any warranty that the software complies with any accessibility standards
+   (including but not limited to WCAG, ADA, Section 508, or any other standards)
+4. Any warranty that the software will make websites fully accessible
+5. Any liability for damages arising from the use or inability to use the software
+6. Any liability for legal compliance or regulatory requirements
+
+ACCESSIBILITY STANDARDS DISCLAIMER
+
+While this software aims to improve web accessibility, it does NOT guarantee:
+- Full compliance with WCAG (Web Content Accessibility Guidelines)
+- Compliance with ADA (Americans with Disabilities Act)
+- Compliance with Section 508 or any other accessibility regulations
+- That websites will become fully accessible to all users
+- That all accessibility issues will be detected or fixed
+
+Users are solely responsible for ensuring their websites meet applicable
+accessibility standards and legal requirements. This software is a tool to
+assist with accessibility improvements but does not replace professional
+accessibility audits, testing with real users, or legal compliance reviews.
+
+NO LEGAL ADVICE
+
+Nothing in this software or its documentation constitutes legal advice.
+Users should consult with qualified legal professionals regarding their
+specific accessibility compliance obligations.
+
+USE AT YOUR OWN RISK
+
+You acknowledge that you use this software at your own risk. The authors
+and contributors shall not be liable for any direct, indirect, incidental,
+special, exemplary, or consequential damages (including, but not limited to,
+procurement of substitute goods or services; loss of use, data, or profits;
+or business interruption) however caused and on any theory of liability,
+whether in contract, strict liability, or tort (including negligence or
+otherwise) arising in any way out of the use of this software, even if
+advised of the possibility of such damage.
