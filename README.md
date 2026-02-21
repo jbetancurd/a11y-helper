@@ -7,7 +7,11 @@ A free, open-source Chrome extension that helps people with disabilities overcom
 
 ## 🎥 Video Demo
 
-https://github.com/jbetancurd/a11y-helper/assets/videoDemo.mp4
+
+
+https://github.com/user-attachments/assets/4595c6bf-b9a6-42a6-a6b7-b52216100995
+
+
 
 > Watch the extension in action! See how the floating panel, voice commands, and accessibility features work on real websites.
 
